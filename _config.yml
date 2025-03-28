@@ -16,7 +16,8 @@ timezone:
 
 title: Abhinab Acharya # the main title
 
-tagline: Ph.D. Student # it will display as the subtitle
+tagline: Ph.D. Student <a href="/assets/files/cv.pdf" target="_blank"><i class="fas fa-download"></i></a>
+ # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
   Ph.D. Candidate in AI, Robust Deep Learning, etc.

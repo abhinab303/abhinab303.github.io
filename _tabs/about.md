@@ -8,7 +8,7 @@ I am a third year Computer Science Ph.D. student at Rochester Institute of Techn
 
 My research explores **Adversarial Robustness**, **Continual Learning**, and **Data-Efficient Deep Learning**. The models I work with are primarily based on **Vision Transformers**, **Vision Language Models**, **Large Language Models**, and **CNNs**.
 
-[Click for my CV](/assets/files/cv.pdf)
+[Click for my CV.](/assets/files/cv.pdf)
 
 # Application of my Research in Industry 
 
