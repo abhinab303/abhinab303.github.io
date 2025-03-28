@@ -8,6 +8,8 @@ I am a third year Computer Science Ph.D. student at Rochester Institute of Techn
 
 My research explores **Adversarial Robustness**, **Continual Learning**, and **Data-Efficient Deep Learning**. The models I work with are primarily based on **Vision Transformers**, **Vision Language Models**, **Large Language Models**, and **CNNs**.
 
+[Click for my CV](/assets/files/cv.pdf)
+
 # Application of my Research in Industry 
 
 In real-world industry environments, machine learning models are rarely built from scratch every time. More often than not, there’s already a model running in production. That model was trained on some initial old dataset. But as time passes, things change: **the data evolves**, and **user needs** shift. The availablity of new data naturally raises important questions about how the new data should be used:
@@ -24,7 +26,7 @@ How to train the model depend on several real-world constraints:
 - Can we afford to run hyperparameter tuning again?
 - What if we spend all those resources on retraining, only to find out the model performs worse?
 
-If you’ve encountered questions like these, you’re not alone, this is exactly where **my research becomes valuable**. Here are some **cost-effective strategies** that directly stems from my reasearch:
+If you’ve encountered questions like these, you’re not alone, this is exactly where **my research becomes valuable**. Here are some **cost-effective strategies** that directly stems from my research:
 
 - **Selective Training**: Carefully choose a subset of both old and new data for training, instead of using everything.
 - **Continual Learning**: Continue training from the existing model — even when the original training data is no longer accessible.
