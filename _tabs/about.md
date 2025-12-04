@@ -10,6 +10,24 @@ My research explores **Adversarial Robustness**, **Continual Learning**, and **D
 
 [Click for my CV.](/assets/files/cv.pdf)
 
+# Data Efficient Machine Learning
+
+The success of deep learning comes at the cost of large amounts of data and increased resource consumption Subset or coreset selection aims to find candidate data points from a large pool of data such that the model trained on the subset has comparable performance to that of the model trained on thefull set, which in turn helps decrease the resources consumed by training on large amounts of data. [Paper](https://proceedings.mlr.press/v235/acharya24a.html)
+
+<img class="full-width-img" src="/assets/img/data_eff_ml.png" alt="Data Efficient ML">
+
+# Diffusion Model Based Continual Learning
+
+Continual learning models can learn new tasks over time while trying to maintain what they have learned before. Inspired by how humans revisit past knowledge, we introduce a new relearning method that uses generative replay to measure how much information is lost after learning a new task. We then realign the model by retraining it for a few epochs on a selected subset of library samples that the model finds confusing across tasks, essentially performing a targeted generative relearning step. [Paper](https://openreview.net/pdf?id=gCYFtUKXSc)
+
+<img class="full-width-img" src="/assets/img/dm_cl.png" alt="Diffusion based CL">
+
+# Parameter Efficient Robust Fine-tuning
+
+Adversarial robustness in ViTs can be improved by recognizing that not all layers are equally vulnerable to attacks. Instead of uniformly adapting the model, we focus on parameter-efficient finetuning (PEFT) that identifies and reinforces these vulnerable layers. By selectively allocating more parameters to the layers that contribute most to adversarial weakness, our layer-aware PEFT strategy strengthens the model’s defenses while remaining efficient. [Paper](https://openreview.net/pdf?id=5TitVYbQQ2)
+
+<img class="full-width-img" src="/assets/img/peft_adv.png" alt="PEFT for adversarial robustness">
+
 # Application of my Research in Industry 
 
 In real-world industry environments, machine learning models are rarely built from scratch every time. More often than not, there’s already a model running in production. That model was trained on some initial old dataset. But as time passes, things change: **the data evolves**, and **user needs** shift. The availablity of new data naturally raises important questions about how the new data should be used:
