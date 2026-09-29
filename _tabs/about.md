@@ -32,7 +32,7 @@ description: >-
 
 - **Research Assistant, Rochester Institute of Technology** · August 2022–present. Research in data selection, generative augmentation, multimodal continual learning, and robust adaptation of foundation models.
 - **R&D Software Engineer, North Star Developer’s Village** · 2019–2022. Developed machine learning solutions for clinical-note text classification and server-side functionality for remote learning platforms used by **50+ universities**.
-- **Ph.D. in Computer Science, Rochester Institute of Technology** · August 2022–present; expected **August 2027**. Coursework includes statistical machine learning, deep learning, data-driven knowledge discovery, and non-convex optimization.
+- **Ph.D. in Computer Science, Rochester Institute of Technology** · August 2022–present; expected **May 2027**. Coursework includes statistical machine learning, deep learning, data-driven knowledge discovery, and non-convex optimization.
 - **Bachelor’s in Electrical Engineering, Tribhuvan University** · 2013–2017, Lalitpur, Nepal.
 
 ## Projects, teaching & leadership
