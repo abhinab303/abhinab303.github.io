@@ -1,0 +1,28 @@
+headline: Machine Learning Researcher & AI Engineer
+bio: >-
+  I am a **final-year Computer Science Ph.D. student** at
+  [Rochester Institute of Technology (RIT)](https://www.rit.edu/), with graduation
+  expected in **August 2027**. I am advised by
+  [Dr. Xumin Liu](https://www.rit.edu/directory/xmlics-xumin-liu) and collaborate
+  with the [Machine Learning and Data Intensive Computing Lab](https://www.rit.edu/mining/)
+  led by [Dr. Qi Yu](https://www.rit.edu/directory/qyuvks-qi-yu).
+focus: >-
+  My research focuses on **data-efficient deep learning**, **continual learning**,
+  and **adversarial robustness**, using diffusion models, vision-language models,
+  and vision transformers. At **Wasabi Technologies**, I apply these interests
+  to object detection and efficient LLM inference.
+wasabi:
+  company: Wasabi Technologies
+  role: ML/AI Co-op
+  dates: June 2026–present
+  schedule: Scheduled through December 2026
+  projects:
+    - title: Object detection
+      description: >-
+        I build client-specific detection systems with DINO, TIPS, SAM, and OWL,
+        achieving over **70% AP at 0.5 IoU** while running at **3–5 FPS**.
+    - title: LLM inference
+      description: >-
+        I optimize KV caching with NVIDIA Dynamo and cloud storage, reducing
+        expensive storage requirements while achieving a **100% cache hit rate
+        on the evaluated workload**.

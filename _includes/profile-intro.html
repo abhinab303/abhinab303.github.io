@@ -1,0 +1,13 @@
+<div class="profile-intro">
+  {% if include.home %}
+    <h1>{{ site.data.profile.headline | escape }}</h1>
+  {% endif %}
+  {{ site.data.profile.bio | markdownify }}
+  {{ site.data.profile.focus | markdownify }}
+  <nav class="profile-links" aria-label="Profile links">
+    <a href="{{ '/assets/files/cv.pdf' | relative_url }}">Resume <span aria-hidden="true">↗</span></a>
+    <a href="mailto:{{ site.social.email }}">Email</a>
+    <a href="https://github.com/{{ site.github.username }}">GitHub</a>
+    <a href="https://www.linkedin.com/in/{{ site.linkedin.username }}">LinkedIn</a>
+  </nav>
+</div>

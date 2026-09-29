@@ -1,63 +1,63 @@
 ---
-# the default layout is 'page'
 icon: fas fa-info-circle
 order: 4
+description: >-
+  Final-year Computer Science Ph.D. student at RIT and ML/AI Co-op at Wasabi
+  Technologies. Research, publications, industry experience, mentoring, and service.
 ---
 
-I am a third year Computer Science Ph.D. student at Rochester Institute of Technology (RIT), New York. I am advised by [Dr. Xumin Liu](https://www.rit.edu/directory/xmlics-xumin-liu) and I collaborate with the [Machine Learning and Data Intensive Computing Lab](https://www.rit.edu/mining/) led by [Dr. Qi Yu](https://www.rit.edu/directory/qyuvks-qi-yu).
+{% include profile-intro.html %}
 
-My research explores **Adversarial Robustness**, **Continual Learning**, and **Data-Efficient Deep Learning**. The models I work with are primarily based on **Vision Transformers**, **Vision Language Models**, **Large Language Models**, and **CNNs**.
+## Current industry work
 
-[Click for my CV.](/assets/files/cv.pdf)
+{% include industry-work.html %}
 
-# Data Efficient Machine Learning
+## Publications
 
-The success of deep learning comes at the cost of large amounts of data and increased resource consumption Subset or coreset selection aims to find candidate data points from a large pool of data such that the model trained on the subset has comparable performance to that of the model trained on thefull set, which in turn helps decrease the resources consumed by training on large amounts of data. [Paper](https://proceedings.mlr.press/v235/acharya24a.html)
+{% for paper in site.data.research.publications %}
+{% include research-entry.html paper=paper %}
+{% endfor %}
 
-<img class="full-width-img" src="/assets/img/data_eff_ml.png" alt="Data Efficient ML">
+## Ongoing research
 
-# Diffusion Model Based Continual Learning
+{% assign robustness = site.data.research.projects | where: 'id', 'robust-peft' | first %}
+{% include research-entry.html paper=robustness %}
 
-Continual learning models can learn new tasks over time while trying to maintain what they have learned before. Inspired by how humans revisit past knowledge, we introduce a new relearning method that uses generative replay to measure how much information is lost after learning a new task. We then realign the model by retraining it for a few epochs on a selected subset of library samples that the model finds confusing across tasks, essentially performing a targeted generative relearning step. [Paper](https://openreview.net/pdf?id=gCYFtUKXSc)
+## Research mentoring
 
-<img class="full-width-img" src="/assets/img/dm_cl.png" alt="Diffusion based CL">
+{% assign mentoring = site.data.research.projects | where: 'id', 'video-anomaly-detection' | first %}
+{% include research-entry.html paper=mentoring %}
 
-# Parameter Efficient Robust Fine-tuning
+## Experience & education
 
-Adversarial robustness in ViTs can be improved by recognizing that not all layers are equally vulnerable to attacks. Instead of uniformly adapting the model, we focus on parameter-efficient finetuning (PEFT) that identifies and reinforces these vulnerable layers. By selectively allocating more parameters to the layers that contribute most to adversarial weakness, our layer-aware PEFT strategy strengthens the model’s defenses while remaining efficient. [Paper](https://openreview.net/pdf?id=5TitVYbQQ2)
+- **Research Assistant, Rochester Institute of Technology** · August 2022–present. Research in data selection, generative augmentation, multimodal continual learning, and robust adaptation of foundation models.
+- **R&D Software Engineer, North Star Developer’s Village** · 2019–2022. Developed machine learning solutions for clinical-note text classification and server-side functionality for remote learning platforms used by **50+ universities**.
+- **Ph.D. in Computer Science, Rochester Institute of Technology** · August 2022–present; expected **August 2027**. Coursework includes statistical machine learning, deep learning, data-driven knowledge discovery, and non-convex optimization.
+- **Bachelor’s in Electrical Engineering, Tribhuvan University** · 2013–2017, Lalitpur, Nepal.
 
-<img class="full-width-img" src="/assets/img/peft_adv.png" alt="PEFT for adversarial robustness">
+## Projects, teaching & leadership
 
-# Application of my Research in Industry 
+- **Data science learning platform, RIT.** Built a Flask, React, and MongoDB platform for Principles of Computing Immersion, supporting **100+ students**, and supervised its undergraduate contributors.
+- **Teaching Assistant, RIT** · 2023–2024. Led labs, graded coursework, and mentored students in Machine Learning, Computer Science, and Database Systems.
+- **Team Manager, North Star Developer’s Village** · 2022. Managed three developers researching and building educational robots.
+- **Robotics Team Leader, Tribhuvan University** · 2015–2017. Led the university team at ABU ROBOCON 2016 in Thailand.
 
-In real-world industry environments, machine learning models are rarely built from scratch every time. More often than not, there’s already a model running in production. That model was trained on some initial old dataset. But as time passes, things change: **the data evolves**, and **user needs** shift. The availablity of new data naturally raises important questions about how the new data should be used:
+## Service & recognition
 
-- Should we combine the new data with the old and retrain the model from scratch?
-- Should we ignore the old data and train a completely new model with new data?
-- Is it better to initialize with the current model’s weights and continue training?
-- Or, should we quickly build a prototype to see if the model even works on the new data?
+- **Silver Reviewer Award, ICML 2026**, recognizing strong reviews based on area-chair ratings.
+- **Conference reviewing:** 31 papers across NeurIPS 2025 and 2026, ICML 2026, AAAI 2026 and 2027, ICLR 2026, CVPR 2026, ECCV 2026, and AISTATS 2026.
+- **Journal reviewing:** IEEE Transactions on Services Computing (2024) and TMLR (2026).
+- **Additional service:** IJCAI 2026, IEEE Big Data 2024, and ACM AI Summit 2026.
+- **Upcoming reviewer service:** ICLR 2027 and AISTATS 2027.
+- **Best Engineering and Panasonic Awards, ABU ROBOCON 2016**, with the Tribhuvan University team.
 
-How to train the model depend on several real-world constraints:
+## Selected talks
 
-- Do we have the **storage** to retain all previously collected data?
-- How much **time**, **compute**, and **energy** will full-retraining require? Can we justify the cost? Can we afford the cost?
-- Can we afford to run hyperparameter tuning again?
-- What if we spend all those resources on retraining, only to find out the model performs worse?
+- **Data-Efficient Deep Learning** · GCCIS PhD Colloquium Series, RIT, November 2024.
+- **BOSS: Size-Aware One-shot Subset Selection** · Poster presentation at ICML 2024, July 2024.
 
-If you’ve encountered questions like these, you’re not alone, this is exactly where **my research becomes valuable**. Here are some **cost-effective strategies** that directly stems from my research:
+## Tools & methods
 
-- **Selective Training**: Carefully choose a subset of both old and new data for training, instead of using everything.
-- **Continual Learning**: Continue training from the existing model — even when the original training data is no longer accessible.
-- **Efficient Tuning**: Perform hyperparameter tuning on just the selected subset, rather than the full dataset.
+I work with PyTorch, scikit-learn, CLIP, Stable Diffusion, vision transformers, and multimodal models. For LLM inference, my toolkit includes NVIDIA Dynamo, LMCache, SGLang, vLLM, TensorRT-LLM, and cloud storage. My main programming languages include Python, C/C++, JavaScript, and SQL.
 
-
-Of course, how to select the data depends on your specific goals:
-
-- Do you need **maximum performance**?
-- Is your priority to **minimize resource usage**?
-- Is the **old data distribution** more important than maintaining accuracy on the new one?
-
-These trade-offs are at the heart of what I explore in my research, helping organizations adapt to change, without starting from zero.
-
-<!-- > Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
-{: .prompt-tip } -->
+[Download my resume]({{ '/assets/files/cv.pdf' | relative_url }}) for the complete experience, skills, and publication list.

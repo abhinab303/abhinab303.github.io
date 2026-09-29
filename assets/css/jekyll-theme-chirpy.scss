@@ -1,0 +1,125 @@
+---
+---
+
+@use 'main
+{%- if jekyll.environment == 'production' -%}
+  .bundle
+{%- endif -%}
+';
+
+.profile-intro {
+  h1 {
+    margin-top: 0.75rem;
+    margin-bottom: 1.4rem;
+    font-size: clamp(1.7rem, 3vw, 2.2rem);
+    line-height: 1.25;
+    letter-spacing: -0.025em;
+  }
+
+  .profile-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem 1.4rem;
+    margin: 1.5rem 0 0.5rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+  }
+}
+
+.content .industry-work {
+  padding: 1.2rem 1.35rem;
+  border: 1px solid var(--main-border-color);
+  border-left: 3px solid var(--link-color);
+  border-radius: 0 0.65rem 0.65rem 0;
+  background: var(--card-bg);
+
+  .industry-role {
+    margin-bottom: 0.3rem;
+  }
+
+  ul {
+    margin-bottom: 0;
+    padding-left: 1.2rem;
+  }
+
+  li + li {
+    margin-top: 0.65rem;
+  }
+}
+
+.content .entry-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.35rem 0.75rem;
+  color: var(--text-muted-color);
+  font-size: 0.87rem;
+  line-height: 1.5;
+  margin-bottom: 0.8rem;
+}
+
+.content .research-entry {
+  margin: 1.4rem 0 2rem;
+  scroll-margin-top: 6rem;
+
+  .research-venue {
+    color: var(--link-color);
+    font-weight: 700;
+  }
+
+  .research-role {
+    padding-left: 0.75rem;
+    border-left: 1px solid var(--link-underline-color);
+  }
+
+  .research-title {
+    font-size: 1.13rem;
+    line-height: 1.5;
+    margin: 0 0 0.65rem;
+    overflow-wrap: anywhere;
+  }
+
+  .research-authors {
+    font-size: 0.92rem;
+    color: var(--text-muted-color);
+  }
+
+  .research-links {
+    margin-bottom: 0;
+    font-size: 0.92rem;
+  }
+
+  &.research-entry-compact {
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--main-border-color);
+
+    p {
+      margin-bottom: 0.65rem;
+    }
+
+    .research-links {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.full-width-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 1.5rem auto;
+}
+
+.portfolio-blog {
+  margin-top: 3rem;
+
+  #post-list {
+    margin-top: 1.25rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .content .industry-work {
+    padding: 1rem;
+  }
+}

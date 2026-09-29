@@ -1,8 +1,26 @@
 ---
 layout: home
-# Index page
+description: >-
+  Abhinab Acharya is a final-year Computer Science Ph.D. student at RIT and an
+  ML/AI Co-op at Wasabi Technologies, working on efficient and reliable AI.
 ---
 
-I am a third year Computer Science Ph.D. student at Rochester Institute of Technology (RIT), New York. I am advised by [Dr. Xumin Liu](https://www.rit.edu/directory/xmlics-xumin-liu) and I collaborate with the [Machine Learning and Data Intensive Computing Lab](https://www.rit.edu/mining/) led by [Dr. Qi Yu](https://www.rit.edu/directory/qyuvks-qi-yu).
+{% include profile-intro.html home=true %}
 
-My research explores **Adversarial Robustness**, **Continual Learning**, and **Data-Efficient Deep Learning**. The models I work with are primarily based on **Vision Transformers**, **Vision Language Models**, **Large Language Models**, and **CNNs**.
+## Currently at Wasabi
+
+{% include industry-work.html %}
+
+## Selected publications
+
+{% for paper in site.data.research.publications %}
+{% include research-entry.html paper=paper compact=true %}
+{% endfor %}
+
+## Ongoing research & mentoring
+
+{% for paper in site.data.research.projects %}
+{% include research-entry.html paper=paper compact=true %}
+{% endfor %}
+
+[More about my research, experience, and service]({{ '/about/' | relative_url }})

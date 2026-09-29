@@ -1,0 +1,95 @@
+publications:
+  - id: cmda
+    title: Class-Mixed Diffusion Augmentation for Shortcut-Breaking in Continual Learning
+    venue: NeurIPS 2026
+    authors:
+      - Abhinab Acharya
+      - Dayou Yu
+      - Qi Yu
+      - Xumin Liu
+    summary: >-
+      Classifier-guided diffusion augmentation creates auxiliary classes that
+      challenge shortcut reliance when learning new tasks without storing past data.
+    details: >-
+      Class-Mixed Diffusion Augmentation (CMDA) uses a pretrained diffusion model
+      to generate past-task data and shortcut-breaking auxiliary examples. We
+      select auxiliary tokens using classifier feedback and train their generated
+      images as separate classes, helping distinguish tasks that share spurious
+      visual cues. Experiments on Split-CIFAR100 and Split-ImageNet show consistent
+      gains without fine-tuning the diffusion model or backpropagating through
+      its sampling process.
+
+  - id: multimodal-continual-learning
+    title: "Mixing Expertise with Confidence: A Mixture of Experts Framework for Robust Multi-Modal Continual Learning"
+    venue: ICML 2026
+    authors:
+      - Md Abdullah Al Forhad
+      - Yuansheng Zhu
+      - Abhinab Acharya
+      - Xumin Liu
+      - Qi Yu
+      - Weishi Shi
+    summary: >-
+      A CLIP-based mixture of experts shares knowledge through expert priors and
+      calibrated confidence to support multimodal continual learning.
+    details: >-
+      We enable communication between experts without an inter-task shared
+      parameter space or an explicit task-ID predictor. CLIP provides expert
+      priors that guide calibrated inter-task posteriors, while modeling these
+      posteriors encourages complementary specialization. The framework is
+      evaluated in continual learning settings without reference datasets or
+      replay memory.
+    paper_url: https://openreview.net/pdf?id=ZPJbTXMYft
+
+  - id: boss
+    title: Balancing Feature Similarity and Label Variability for Optimal Size-Aware One-shot Subset Selection
+    venue: ICML 2024
+    authors:
+      - Abhinab Acharya
+      - Dayou Yu
+      - Qi Yu
+      - Xumin Liu
+    summary: >-
+      BOSS selects training subsets that balance diversity and difficulty,
+      adapting the selection to the available data budget.
+    details: >-
+      This size-aware, one-shot subset selection method balances feature
+      similarity and label variability to make training more data-efficient.
+      In the evaluated classification experiments, it improves accuracy by up
+      to 6 percentage points over state-of-the-art subset-selection baselines.
+    paper_url: https://proceedings.mlr.press/v235/acharya24a.html
+    image: /assets/img/data_eff_ml.png
+    image_alt: Overview of data-efficient learning through training subset selection
+
+projects:
+  - id: robust-peft
+    title: Attribution Sensitivity Guided Parameter Allocation for Adversarially Robust Parameter-Efficient Fine-Tuning
+    venue: Under review
+    summary: >-
+      A one-shot attribution-sensitivity measure guides how a fixed LoRA rank
+      budget is distributed across transformer blocks for adversarial robustness.
+    details: >-
+      The method assigns more LoRA capacity to blocks where global attribution
+      sharing is less sensitive to relative weight changes. Evaluations on
+      CIFAR-10 and ImageNet-R with ViT-B/16 and DeiT-Tiny, across three rank
+      budgets, support this sensitivity measure as a useful signal for robust
+      parameter allocation.
+
+  - id: video-anomaly-detection
+    title: "The Road Less Seen: Segment Exploration for Weakly Supervised Video Anomaly Detection"
+    venue: CVPR 2026
+    role: Research mentoring
+    authors:
+      - Anusha Acharya
+      - Hitesh Sapkota
+      - Qi Yu
+      - Xumin Liu
+    summary: >-
+      I mentored video anomaly detection research using InternVL and CLIP on
+      UCF-Crime and XD-Violence.
+    details: >-
+      The paper combines temporal clustering with uncertainty-based segment
+      exploration to learn from diverse and ambiguous video segments. It also
+      emphasizes evaluation at meaningful false-positive rates, where a high
+      overall AUROC can otherwise hide missed anomalies.
+    paper_url: https://openaccess.thecvf.com/content/CVPR2026/html/Acharya_The_Road_Less_Seen_Segment_Exploration_for_Weakly_Supervised_Video_CVPR_2026_paper.html

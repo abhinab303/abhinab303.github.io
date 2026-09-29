@@ -1,0 +1,10 @@
+{% assign work = site.data.profile.wasabi %}
+<div class="industry-work">
+  <p class="industry-role"><strong>{{ work.role | escape }}</strong> · {{ work.company | escape }}</p>
+  <p class="entry-meta">{{ work.dates | escape }} · {{ work.schedule | escape }}</p>
+  <ul>
+    {% for project in work.projects %}
+      <li><strong>{{ project.title | escape }}.</strong> {{ project.description | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>
+    {% endfor %}
+  </ul>
+</div>

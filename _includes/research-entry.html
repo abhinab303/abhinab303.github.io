@@ -1,0 +1,28 @@
+{% assign paper = include.paper %}
+<article class="research-entry{% if include.compact %} research-entry-compact{% endif %}"{% unless include.compact %} id="{{ paper.id }}"{% endunless %}>
+  <p class="entry-meta"><span class="research-venue">{{ paper.venue | escape }}</span>{% if paper.role %}<span class="research-role">{{ paper.role | escape }}</span>{% endif %}</p>
+  <h3 class="research-title">
+    {% if include.compact %}
+      <a href="{{ '/about/' | relative_url }}#{{ paper.id }}">{{ paper.title | escape }}</a>
+    {% else %}
+      {{ paper.title | escape }}
+    {% endif %}
+  </h3>
+  {% unless include.compact %}
+    {% if paper.authors %}
+      <p class="research-authors">{% if paper.role %}Paper authors: {% endif %}{% for author in paper.authors %}{% if author == site.social.name %}<strong>{{ author | escape }}</strong>{% else %}{{ author | escape }}{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}</p>
+    {% endif %}
+  {% endunless %}
+  <p>{{ paper.summary | escape }}</p>
+  {% unless include.compact %}
+    <p>{{ paper.details | escape }}</p>
+  {% endunless %}
+  {% if paper.paper_url %}
+    <p class="research-links"><a href="{{ paper.paper_url }}">Read paper<span class="visually-hidden">: {{ paper.title | escape }}</span> <span aria-hidden="true">↗</span></a></p>
+  {% endif %}
+  {% unless include.compact %}
+    {% if paper.image %}
+      <img class="full-width-img" src="{{ paper.image | relative_url }}" alt="{{ paper.image_alt | escape }}" loading="lazy">
+    {% endif %}
+  {% endunless %}
+</article>
